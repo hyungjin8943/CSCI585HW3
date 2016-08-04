@@ -1,0 +1,431 @@
+
+public class Question2 {
+	 public static class Map extends Mapper<LongWritable, Text, Text, IntWritable> {
+	        private final static IntWritable one = new IntWritable(1);
+	        private Text word = new Text();
+	       String interest;
+	        public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+	            String line = value.toString();
+	            String[] substrings = line.split(",");
+	       
+	               interest=substrings[2];
+	               
+	               if(interest.equals("Aircraft")){
+	            	   int x = Integer.parseInt(substrings[3]);
+	            	   int y = Integer.parseInt(substrings[4]);
+	            	   double x2 = Math.pow((56-x),2);
+	            	   double y2 = Math.pow((74-y),2);
+	            	   double cal = Math.sqrt(x2+y2);
+	            	   if(cal<=5){
+	            		   word.set(interest);
+	            		   context.write(word, one);
+	            		   
+	            	   }
+	               }
+	            	 if(interest.equals("Art antique collecting")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((93-x),2);
+		            	   double y2 = Math.pow((39-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+	               }
+	               
+	            	 if(interest.equals("Astrology")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((60-x),2);
+		            	   double y2 = Math.pow((1-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+	               }
+	             
+	            	 if(interest.equals("Baseball")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((36-x),2);
+		            	   double y2 = Math.pow((85-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+	               }
+	            	 if(interest.equals("Basketball")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((60-x),2);
+		            	   double y2 = Math.pow((49-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+	               }
+	            	 if(interest.equals("Bicycling")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((82-x),2);
+		            	   double y2 = Math.pow((59-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+	               }
+	            	 if(interest.equals("Boating sailing")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((86-x),2);
+		            	   double y2 = Math.pow((22-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+	               }
+	            	 if(interest.equals("Book reading")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((31-x),2);
+		            	   double y2 = Math.pow((23-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+	               }  
+	            	 if(interest.equals("Camping hiking")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((22-x),2);
+		            	   double y2 = Math.pow((73-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+	               }  
+	              	 if(interest.equals("Casino vacation")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((34-x),2);
+		            	   double y2 = Math.pow((25-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+	               }  
+	              	 if(interest.equals("Clothing")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((33-x),2);
+		            	   double y2 = Math.pow((98-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+	               }
+	              	if(interest.equals("Cooking")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((33-x),2);
+		            	   double y2 = Math.pow((78-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+	               }
+	              	
+	              	if(interest.equals("Cosmetics")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((53-x),2);
+		            	   double y2 = Math.pow((85-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+	               }
+	              	if(interest.equals("Cruise vacation")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((79-x),2);
+		            	   double y2 = Math.pow((50-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+	               }
+	              	if(interest.equals("Electronics")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((13-x),2);
+		            	   double y2 = Math.pow((69-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+		            	
+	               } 
+	              	if(interest.equals("Fashion")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((48-x),2);
+		            	   double y2 = Math.pow((79-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+		            	
+	               }
+	              	if(interest.equals("Fishing")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((88-x),2);
+		            	   double y2 = Math.pow((33-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+		            	
+	               }
+	               	if(interest.equals("Fitness")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((4-x),2);
+		            	   double y2 = Math.pow((22-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+		            	
+	               }
+	               	if(interest.equals("Football")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((90-x),2);
+		            	   double y2 = Math.pow((32-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+		            	
+	               }
+	               	if(interest.equals("Golf")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((33-x),2);
+		            	   double y2 = Math.pow((55-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+		            	
+	               }
+	               	if(interest.equals("History")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((32-x),2);
+		            	   double y2 = Math.pow((70-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+		            	
+	               }
+	              	
+	            	if(interest.equals("Hockey")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((67-x),2);
+		            	   double y2 = Math.pow((75-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+		            	
+	               }
+	            	if(interest.equals("Home furnishings")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((19-x),2);
+		            	   double y2 = Math.pow((14-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+		            	
+	               }
+	            	
+	            	if(interest.equals("Household pets")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((9-x),2);
+		            	   double y2 = Math.pow((91-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+		            	
+	               }
+	            	if(interest.equals("Hunting")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((81-x),2);
+		            	   double y2 = Math.pow((63-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+		            	
+	               }
+	            	if(interest.equals("Jewelry")){
+	            	   int x = Integer.parseInt(substrings[3]);
+	            	   int y = Integer.parseInt(substrings[4]);
+	            	   double x2 = Math.pow((52-x),2);
+	            	   double y2 = Math.pow((35-y),2);
+	            	   double cal = Math.sqrt(x2+y2);
+	            	   if(cal<=5){
+	            		   word.set(interest);
+	            		   context.write(word, one);
+	            		   
+	            	   }
+	            	
+               }
+	            	if(interest.equals("Scuba")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((9-x),2);
+		            	   double y2 = Math.pow((56-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+		            	
+	               }	
+	            	
+	            	if(interest.equals("Shoes")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((40-x),2);
+		            	   double y2 = Math.pow((58-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+		            	
+	               }	
+	            	if(interest.equals("Swimming pool")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((41-x),2);
+		            	   double y2 = Math.pow((14-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+		            	
+	               }
+	            	
+	            	if(interest.equals("Tennis")){
+		            	   int x = Integer.parseInt(substrings[3]);
+		            	   int y = Integer.parseInt(substrings[4]);
+		            	   double x2 = Math.pow((85-x),2);
+		            	   double y2 = Math.pow((74-y),2);
+		            	   double cal = Math.sqrt(x2+y2);
+		            	   if(cal<=5){
+		            		   word.set(interest);
+		            		   context.write(word, one);
+		            		   
+		            	   }
+		            	
+	               }
+	            	
+	              	
+	        }
+	    } 
+	 
+	    public static class Reduce extends Reducer<Text, IntWritable, Text, IntWritable> {
+	        public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
+	            int sum = 0;
+	            for (IntWritable val : values) {
+	                sum += val.get();
+	            }
+	            context.write(key, new IntWritable(sum));
+	        }
+	    }
+	 
+	    public static void main(String[] args) throws Exception {
+	        Configuration conf = new Configuration();
+	 
+	        Job job = new Job(conf, "Question2");
+	        job.setJarByClass(Question2.class);
+	        job.setOutputKeyClass(Text.class);
+	        job.setOutputValueClass(IntWritable.class);
+	 
+	        job.setMapperClass(Map.class);
+	        job.setCombinerClass(Reduce.class);
+	        job.setReducerClass(Reduce.class);
+	 
+	        job.setInputFormatClass(TextInputFormat.class);
+	        job.setOutputFormatClass(TextOutputFormat.class);
+	 
+	        FileInputFormat.addInputPath(job, new Path(args[0]));
+	        FileOutputFormat.setOutputPath(job, new Path(args[1]));
+	 
+	        job.waitForCompletion(true);
+	    }        
+	}

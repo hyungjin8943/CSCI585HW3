@@ -1,0 +1,8 @@
+Map: <LongWritable, Text>   ->  List<Text,IntWritable>
+Reduce List<Text, IntWritable> -> <Text, IntWritable>
+
+Map function generate key pair value of alphabet a,b,c,d,e and f according to the age group condition and 1 which is the value. 
+For each input file line these key value pair is outputted by map function. 
+
+Reduce function gets input of alphabet as a key and list of 1’s as value. 
+By counting the number of 1’s the reduce function finds the number of alphabet which is the age group. 

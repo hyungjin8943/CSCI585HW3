@@ -1,0 +1,65 @@
+
+public class Question3 {
+	
+	
+	public static class Map extends Mapper<LongWritable, Text, Text, IntWritable> {
+        private final static IntWritable one = new IntWritable(1);
+        private Text word = new Text();
+ 
+        public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        	   String line = value.toString();
+               String[] substrings = line.split(",");
+                int age=0;
+               age=Integer.parseInt(substrings[1]);
+             
+             if(5 <= age && age<= 14){
+            	word.set("a"); 
+            }
+            else if(15 <= age && age<= 24){
+            	word.set("b"); 
+            } else if(25 <= age &&age<= 34){
+            	word.set("c"); 
+            } else if(35 <= age &&age<= 44){
+            	word.set("d"); 
+            } else if(45 <= age &&age<= 54){
+            	word.set("e"); 
+            } else if(55<= age){
+            	word.set("f");
+            }
+            context.write(word, one);
+              
+          }
+        
+    }
+	
+	public static class Reduce extends Reducer<Text, IntWritable, Text, IntWritable> {
+        public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
+            int sum = 0;
+            for (IntWritable val : values) {
+                sum += val.get();
+            }
+            context.write(key, new IntWritable(sum));
+        }
+    }
+
+	 public static void main(String[] args) throws Exception {
+	        Configuration conf = new Configuration();
+	 
+	        Job job = new Job(conf, "Question3");
+	        job.setJarByClass(Question3.class);
+	        job.setOutputKeyClass(Text.class);
+	        job.setOutputValueClass(IntWritable.class);
+	        
+	        job.setMapperClass(Map.class);
+	        job.setCombinerClass(Reduce.class);
+	        job.setReducerClass(Reduce.class);
+	 
+	        job.setInputFormatClass(TextInputFormat.class);
+	        job.setOutputFormatClass(TextOutputFormat.class);
+	 
+	        FileInputFormat.addInputPath(job, new Path(args[0]));
+	        FileOutputFormat.setOutputPath(job, new Path(args[1]));
+	 
+	        job.waitForCompletion(true);
+	    }
+}

@@ -1,0 +1,6 @@
+Map: <LongWritable, Text>   ->  List<Text,IntWritable>
+Reduce List<Text, IntWritable> -> <Text, Int Writable>
+
+Map function generate key pair value of useID and 1 which is the value. For each input file line these key value pair is outputted by map function. 
+
+Reduce function gets input of user id as a key and list of 1’s as value. By counting the number of 1’s the reduce function finds the number of friends. 
