@@ -1,2 +1,1 @@
-# CSCI585HW3
-# CSCI585HW3
+Hadoop programing using MapReduce and Amzaon EC2
